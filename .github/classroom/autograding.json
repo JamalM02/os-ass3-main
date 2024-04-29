@@ -1,0 +1,1084 @@
+{
+  "tests": [
+    {
+      "name": "make all",
+      "setup": "",
+      "run": "make",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 2
+    },
+    {
+      "name": "make longestwords",
+      "setup": "",
+      "run": "make longestwords",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 2
+    },
+    {
+      "name": "make clean",
+      "setup": "",
+      "run": "make clean",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 1
+    },
+	{
+      "name": "make file-processor.o",
+      "setup": "",
+      "run": "grep file-processor.o: Makefile",
+      "input": "",
+      "output": "file-processor.o:",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+	{
+      "name": "make main.o",
+      "setup": "",
+      "run": "grep main.o: Makefile",
+      "input": "",
+      "output": "main.o:",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "no length",
+      "setup": "make",
+      "run": "./longestwords tests/simple-tests",
+      "input": "",
+      "output": "Usage: longest-words topCount file1 [...]",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 3
+    },
+    {
+      "name": "no file",
+      "setup": "",
+      "run": "./longestwords 10",
+      "input": "",
+      "output": "Usage: longest-words topCount file1 [...]",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 3
+    },
+    {
+      "name": "create output dir",
+      "setup": "",
+      "run": "mkdir outputs",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 5",
+      "setup": "",
+      "run": "./longestwords 5 tests/simple-tests  > outputs/simple-5.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 5 - started chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+started\\s+chapter\\s+1",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 5 - completed chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+completed",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 5 - 1 fifteens",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "1 fifteens",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 5 - 2 fourteen",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "2 fourteen",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 5 - 3 thirteen",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "3 thirteen",
+	  "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 5 - 3 words length 8",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "3 words length 8",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 5 - 4 beetles 5 Chapter 2 words length 7",
+      "setup": "",
+      "run": "cat outputs/simple-5.txt",
+      "input": "",
+      "output": "4 beetles\\s+5 Chapter\\s+2 words length 7",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 10",
+      "setup": "",
+      "run": "./longestwords 10 tests/simple-tests  > outputs/simple-10.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 10 - started chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+started\\s+chapter\\s+1",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 10 - completed chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+completed",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 10 - length 8 words",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "1 fifteens\\s+2 fourteen\\s+3 thirteen\\s+3 words length 8",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 10 - 4 beetles 5 Chapter",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "4 beetles\\s+5 Chapter",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 10 - 6 cricket 7 dinners 8 invited 9 Serious",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "6 cricket\\s+7 dinners\\s+8 invited\\s+9 Serious",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 10 - 10 thither 7 words length 7",
+      "setup": "",
+      "run": "cat outputs/simple-10.txt",
+      "input": "",
+      "output": "10 thither\\s+7 words length 7",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10",
+      "setup": "",
+      "run": "./longestwords 10 tests/filenotexist tests/simple-tests > outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10 - started chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+started\\s+chapter\\s+1",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10 - completed chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+completed",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10 - length 8 words",
+      "setup": "",
+      "run": "cat outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "1 fifteens\\s+2 fourteen\\s+3 thirteen\\s+3 words length 8",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10 - 4 beetles 5 Chapter 6 cricket 7 dinners 8 invited 9 Serious",
+      "setup": "",
+      "run": "cat outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "4 beetles\\s+5 Chapter\\s+6 cricket\\s+7 dinners\\s+8 invited\\s+9 Serious",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test with second non-existent file longest 10 - 10 thither 7 words length 7",
+      "setup": "",
+      "run": "cat outputs/simple-10-fakefile.txt",
+      "input": "",
+      "output": "10 thither\\s+7 words length 7",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 15 words",
+      "setup": "",
+      "run": "./longestwords 15 tests/simple-tests  > outputs/simple-15.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 15 words - started chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+started\\s+chapter\\s+1",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 15 words - completed chapter 1",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "[A-Za-z][A-Za-z][A-Za-z]\\s+[A-Za-z][A-Za-z][A-Za-z]\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/simple-tests\\s+completed",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Simple test longest 15 words - length 8 words",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "1 fifteens\\s+2 fourteen\\s+3 thirteen\\s+3 words length 8",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 15 words - length 7 words",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "4 beetles\\s+5 Chapter\\s+6 cricket\\s+7 dinners\\s+8 invited\\s+9 Serious\\s+10 thither\\s+7 words length 7",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 15 words - length 6 words",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "11 \"fourth\\s+12 horses\\s+13 second\\s+3 words length 6",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Simple test longest 15 words - length 5 words",
+      "setup": "",
+      "run": "cat outputs/simple-15.txt",
+      "input": "",
+      "output": "14 \"lines\\s+15 \"thing\"\\s+2 words length 5",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Three short files longest 5 words",
+      "setup": "",
+      "run": "./longestwords 5 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Three short files longest 5 words - trivial 1, 2, 3 started chapter 1",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Three short files longest 5 words - trivial 1, 2, 3 started chapter 2",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 5 words - trivial 1, 2, 3 started chapter 3",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 5 words - trivial 1, 2, 3 completed",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Three short files longest 5 words - length 14 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "1 altruistic-like\\s+1 words length 14",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 5 words - length 12 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "2 consequently\\s+3 consequently;\\s+4 horsewatcher\\s+3 words length 12",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+  	{
+      "name": "Three short files longest 5 words - length 10 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-5.txt",
+      "input": "",
+      "output": "5 altruistic\\s+1 words length 10",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 7 words",
+      "setup": "",
+      "run": "./longestwords 7 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Three short files longest 7 words - trivial 1, 2, 3 started chapter 1",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Three short files longest 7 words - trivial 1, 2, 3 started chapter 2",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 7 words - trivial 1, 2, 3 started chapter 3",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 7 words - trivial 1, 2, 3 completed",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Three short files longest 7 words - length 14 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "1 altruistic-like\\s+1 words length 14",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 7 words - length 12 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "2 consequently\\s+3 consequently;\\s+4 horsewatcher\\s+3 words length 12",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+  	{
+      "name": "Three short files longest 7 words - length 10 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-7.txt",
+      "input": "",
+      "output": "5 altruistic\\s+6 arithmetic\\s+7 arithmetic,\\s+3 words length 10",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 10 words",
+      "setup": "",
+      "run": "./longestwords 10 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Three short files longest 10 words - trivial 1, 2, 3 started chapter 1",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+1.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Three short files longest 10 words - trivial 1, 2, 3 started chapter 2",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+2.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 10 words - trivial 1, 2, 3 started chapter 3",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+started\\s+chapter\\s+3.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Three short files longest 10 words - trivial 1, 2, 3 completed",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d+:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.\\s*[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/trivial\\d[.]txt\\s+completed.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Three short files longest 10 words - length 14 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "1 altruistic-like\\s+1 words length 14",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Three short files longest 10 words - length 12 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "2 consequently\\s+3 consequently;\\s+4 horsewatcher\\s+3 words length 12",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+  	{
+      "name": "Three short files longest 10 words - length 10 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "5 altruistic\\s+6 arithmetic\\s+7 arithmetic,\\s+3 words length 10",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+  	{
+      "name": "Three short files longest 10 words - length 7 words",
+      "setup": "",
+      "run": "cat outputs/trivial-123-10.txt",
+      "input": "",
+      "output": "8 Chapter\\s+9 Jumping\\s+10 jumping\\s+3 words length 7",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 10 words",
+      "setup": "",
+      "run": "./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Two long files longest 10 words - started chapter 1",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 10 words - started chapter 2, 3, 4, 5",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 10 words - started chapter 12, 13, 14, 15",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Two long files longest 10 words - started chapter 21, 22, 23, 24",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 10 words - completed",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 10 words - words 1-3",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "1 cannibalistically\\s+2 circumnavigations\\s+3 disinterestedness",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 10 words - words 4-7",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "4 half-apprehensions,\\s+5 pilgrim-worshipped\\s+6 self-collectedness\\s+7 uncomfortableness,\\s+7 words length 17",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 10 words - words 8-10",
+      "setup": "",
+      "run": "cat outputs/moby-pride-10.txt",
+      "input": "",
+      "output": "8 breakfast-parlour,\\s+9 death-forfeitures\\s+10 superciliousness\\s+3 words length 16",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 50 words",
+      "setup": "",
+      "run": "./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Two long files longest 50 words - started chapter 1, 2, 3, 4, 5",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 50 words - started chapter 12, 13, 14, 15",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+      "name": "Two long files longest 50 words - started chapter 21, 22, 23, 24",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 50 words - completed",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+      "name": "Two long files longest 50 words - length 17",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "8 breakfast-parlour,\\s+9 death-forfeitures\\s+10 superciliousness\\s+3 words length 16",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 50 words - length 16",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "4 half-apprehensions,\\s+5 pilgrim-worshipped\\s+6 self-collectedness\\s+7 uncomfortableness,\\s+7 words length 17",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 50 words - length 15",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "11 accomplishments\\s+12 accomplishments,\\s+13 accomplishments,\"\\s+14 accomplishments;\\s+15 acknowledgments.\\s+16 broad-shouldered\\s+17 comfortableness\\s+18 congratulations\\s+19 conscientiously\\s+20 death-harvesting\\s+21 Ehrenbreitstein,\\s+22 empty-handedness,\\s+23 fellow-creatures\\s+24 hard-heartedness,\\s+25 heterogeneously\\s+26 inconsistencies,\\s+27 intolerableness\\s+28 joint-commanders\\s+29 multitudinously\\s+30 perpendicularly\\s+31 phrenologically\\s+32 poverty-stricken\\s+33 recommendations\\s+34 self-complacency\\s+35 self-consequence,\\s+36 self-gratulation\\s+37 self-gratulation;\\s+38 sleeping-partner\\s+39 superintendence,\\s+40 sympathetically\\s+41 Thoughtlessness,\\s+42 unceremoniously,\\s+43 unconsciousness[?]\\s+44 untraditionally\\s+34 words length 15",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Two long files longest 50 words - length 14",
+      "setup": "",
+      "run": "cat outputs/moby-pride-50.txt",
+      "input": "",
+      "output": "45 accomplishment\\s+46 acknowledgment\\s+47 affectionately\\s+48 candelabra-wise,\\s+49 characteristic,\\s+50 characteristic.\\s+6 words length 14",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words",
+	  "setup": "",
+	  "run": "./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "",
+	  "comparison": "regex",
+      "timeout": 2,
+      "points": null
+    },
+	{
+	  "name": "Four long files longest 10 words - started chapter 1, 2, 3, 4, 5",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words - started chapter 11, 12, 13, 14, 15",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words - started chapter 20, 21, 22, 23, 24",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words - completed",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words - word 1",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "1 fashionable-looking,\\s+1 words length 18",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 10 words - length 17",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-10.txt",
+	  "input": "",
+	  "output": "2 cannibalistically\\s+3 circumnavigations\\s+4 disinterestedness\\s+5 gentleman-coachman\\s+6 half-apprehensions,\\s+7 misrepresentation\\s+8 pilgrim-worshipped\\s+9 self-collectedness\\s+10 uncomfortableness,\\s+9 words length 17",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 3
+    },
+	{
+	  "name": "Four long files longest 50 words",
+	  "setup": "",
+	  "run": "./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "",
+	  "comparison": "regex",
+      "timeout": 2,
+      "points": null
+    },
+	{
+	  "name": "Four long files longest 50 words - started chapter 1, 2, 3, 4, 5",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 5.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - started chapter 11, 12, 13, 14, 15",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 15.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - started chapter 20, 21, 22, 23, 24",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+started chapter 24.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - completed",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\/[a-z-]+[.]txt\\s+completed.",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - lenth 18",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "1 fashionable-looking,\\s+1 words length 18",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - length 17",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "2 cannibalistically\\s+3 circumnavigations\\s+4 disinterestedness\\s+5 gentleman-coachman\\s+6 half-apprehensions,\\s+7 misrepresentation\\s+8 pilgrim-worshipped\\s+9 self-collectedness\\s+10 uncomfortableness,\\s+9 words length 17",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - length 16",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "11 breakfast-parlour\\s+12 breakfast-parlour,\\s+13 death-forfeitures\\s+14 disproportionate\\s+15 half-extinguished\\s+16 impracticability.\\s+17 incomprehensible.\\s+18 incomprehensibly\\s+19 indiscriminately.\\s+20 indiscriminating\\s+21 inextinguishable\\s+22 perpendicularity\\s+23 self-condemnation\\s+24 self-satisfaction,\\s+25 succession-houses\\s+26 superciliousness\\s+27 superciliousness!\\s+28 superciliousness;\\s+29 susceptibilities,\\s+30 unseasonableness\\s+31 well-proportioned\\s+21 words length 16",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four long files longest 50 words - length 15",
+	  "setup": "",
+	  "run": "cat outputs/moby-pride-northanger-frankenstein-50.txt",
+	  "input": "",
+	  "output": "32 accomplishments\\s+33 accomplishments,\\s+34 accomplishments,\"\\s+35 accomplishments;\\s+36 acknowledgments.\\s+37 broad-shouldered\\s+38 cheerful-looking,\\s+39 classifications\\s+40 comfortableness\\s+41 congratulations\\s+42 conscientiously\\s+43 curricle-drivers\\s+44 death-harvesting\\s+45 disrespectfully\\s+46 dissatisfaction\\s+47 dissatisfaction,\\s+48 dressing-closets\\s+49 dressing-closets;\\s+50 Ehrenbreitstein,\\s+19 words length 15",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words",
+	  "setup": "",
+	  "run": "./longestwords 100 tests/moby-dick-sentences.txt tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "",
+	  "comparison": "regex",
+      "timeout": 2,
+      "points": null
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - started chapter 1, 2, 3, 4, 5",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 1.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 2.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 3.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 4.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 5.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 5.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - started chapter 11, 12, 13, 14, 15",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 11.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 12.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 13.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 14.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 15.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 15.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - started chapter 20, 21, 22, 23, 24",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 20.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 21.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 22.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 23.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 24.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+started chapter 24.",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - completed",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+completed.\\s+[A-Za-z]+\\s+[A-Za-z]+\\s+\\d+\\s+\\d\\d:\\d\\d:\\d\\d\\s+\\d\\d\\d\\d\\s+tests\\/[a-z-]+[.]txt\\s+completed.",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - lenth 18, 17",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "1 fashionable-looking,\\s+1 words length 18\\s+2 cannibalistically\\s+3 circumnavigations\\s+4 disinterestedness\\s+5 gentleman-coachman\\s+6 half-apprehensions,\\s+7 misrepresentation\\s+8 pilgrim-worshipped\\s+9 self-collectedness\\s+10 uncomfortableness,\\s+9 words length 17",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - length 16",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "11 breakfast-parlour\\s+12 breakfast-parlour,\\s+13 death-forfeitures\\s+14 disproportionate\\s+15 half-extinguished\\s+16 impracticability.\\s+17 incomprehensible.\\s+18 incomprehensibly\\s+19 indiscriminately.\\s+20 indiscriminating\\s+21 inextinguishable\\s+22 perpendicularity\\s+23 self-condemnation\\s+24 self-satisfaction,\\s+25 succession-houses\\s+26 superciliousness\\s+27 superciliousness!\\s+28 superciliousness;\\s+29 susceptibilities,\\s+30 unseasonableness\\s+31 well-proportioned\\s+21 words length 16",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - length 15",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "32 accomplishments\\s+33 accomplishments,\\s+34 accomplishments,\"\\s+35 accomplishments;\\s+36 acknowledgments.\\s+37 broad-shouldered\\s+38 cheerful-looking,\\s+39 classifications\\s+40 comfortableness\\s+41 congratulations\\s+42 conscientiously\\s+43 curricle-drivers\\s+44 death-harvesting\\s+45 disrespectfully\\s+46 dissatisfaction\\s+47 dissatisfaction,\\s+48 dressing-closets\\s+49 dressing-closets;\\s+50 Ehrenbreitstein,\\s+51 empty-handedness,\\s+52 excommunication\\s+53 exemplification\\s+54 experimentalist,\\s+55 fellow-creatures\\s+56 fellow-creatures,\\s+57 Gloucestershire\\s+58 Gloucestershire.\\s+59 Gloucestershire[?]\\s+60 hard-heartedness,\\s+61 heterogeneously\\s+62 impossibilities\\s+63 inconsistencies,\\s+64 instantaneously\\s+65 Instantaneously,\\s+66 intolerableness\\s+67 joint-commanders\\s+68 misapprehension.\\s+69 mischievousness,\\s+70 multitudinously\\s+71 notwithstanding\\s+72 perpendicularly\\s+73 phrenologically\\s+74 pleasing-looking\\s+75 poverty-stricken\\s+76 presence-chamber\\s+77 recommendations\\s+78 recommendations.\\s+79 representations\\s+80 representations,\\s+81 self-accusations.\\s+82 self-complacency\\s+83 self-consequence,\\s+84 self-gratulation\\s+85 self-gratulation;\\s+86 shrine-dedicated\\s+87 sleeping-partner\\s+88 soul-inspiriting\\s+89 superintendence,\\s+90 sympathetically\\s+91 thoughtlessness\\s+92 Thoughtlessness,\\s+93 traveling-chaise\\s+94 unceremoniously,\\s+95 unconsciousness[?]\\s+96 unforgivingness\\s+97 untraditionally\\s+66 words length 15",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Four/Five long files longest 100 words - length 15",
+	  "setup": "",
+	  "run": "cat outputs/moby2-pride-northanger-frankenstein-100.txt",
+	  "input": "",
+	  "output": "98 \"_Three_-and-twenty!\"\\s+99 accommodations\\s+100 accomplishment\\s+3 words length 14",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Readme has TZ numbers",
+	  "setup": "",
+	  "run": "cat README.md",
+	  "input": "",
+	  "output": "\\d\\d\\d\\d\\d\\d\\d\\d",
+	  "comparison": "regex",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Readme has hours",
+	  "setup": "",
+	  "run": "cat README.md",
+	  "input": "",
+	  "output": "hours",
+	  "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+	{
+	  "name": "Readme has assignment name",
+	  "setup": "",
+	  "run": "cat README.md",
+	  "input": "",
+	  "output": "Assignment 3",
+	  "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+	{
+	  "name": "Readme has course name",
+	  "setup": "",
+	  "run": "cat README.md",
+	  "input": "",
+	  "output": "Operating Systems",
+	  "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}

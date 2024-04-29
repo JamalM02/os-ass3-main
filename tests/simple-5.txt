@@ -1,0 +1,9 @@
+Thu Feb  1 14:00:54 2024 tests/simple-tests started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/simple-tests completed.
+1 fifteens
+2 fourteen
+3 thirteen
+	3 words length 8
+4 beetles
+5 Chapter
+	2 words length 7

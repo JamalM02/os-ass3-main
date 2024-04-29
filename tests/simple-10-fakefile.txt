@@ -1,0 +1,14 @@
+Thu Feb  1 14:00:54 2024 tests/simple-tests started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/simple-tests completed.
+1 fifteens
+2 fourteen
+3 thirteen
+	3 words length 8
+4 beetles
+5 Chapter
+6 cricket
+7 dinners
+8 invited
+9 Serious
+10 thither
+	7 words length 7

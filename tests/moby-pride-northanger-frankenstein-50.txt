@@ -1,0 +1,154 @@
+Thu Feb  1 14:01:25 2024 tests/pride-sentences.txt started chapter 1.
+Thu Feb  1 14:01:25 2024 tests/frankenstein-sentences.txt started chapter 1.
+Thu Feb  1 14:01:25 2024 tests/northanger-abbey-sentences.txt started chapter 1.
+Thu Feb  1 14:01:25 2024 tests/moby-dick-sentences.txt started chapter 1.
+Thu Feb  1 14:01:25 2024 tests/frankenstein-sentences.txt started chapter 2.
+Thu Feb  1 14:01:25 2024 tests/northanger-abbey-sentences.txt started chapter 2.
+Thu Feb  1 14:01:25 2024 tests/pride-sentences.txt started chapter 2.
+Thu Feb  1 14:01:25 2024 tests/moby-dick-sentences.txt started chapter 2.
+Thu Feb  1 14:01:25 2024 tests/pride-sentences.txt started chapter 3.
+Thu Feb  1 14:01:25 2024 tests/moby-dick-sentences.txt started chapter 3.
+Thu Feb  1 14:01:25 2024 tests/northanger-abbey-sentences.txt started chapter 3.
+Thu Feb  1 14:01:25 2024 tests/frankenstein-sentences.txt started chapter 3.
+Thu Feb  1 14:01:26 2024 tests/frankenstein-sentences.txt started chapter 4.
+Thu Feb  1 14:01:26 2024 tests/northanger-abbey-sentences.txt started chapter 4.
+Thu Feb  1 14:01:26 2024 tests/pride-sentences.txt started chapter 4.
+Thu Feb  1 14:01:26 2024 tests/moby-dick-sentences.txt started chapter 4.
+Thu Feb  1 14:01:26 2024 tests/moby-dick-sentences.txt started chapter 5.
+Thu Feb  1 14:01:26 2024 tests/northanger-abbey-sentences.txt started chapter 5.
+Thu Feb  1 14:01:26 2024 tests/pride-sentences.txt started chapter 5.
+Thu Feb  1 14:01:26 2024 tests/frankenstein-sentences.txt started chapter 5.
+Thu Feb  1 14:01:27 2024 tests/northanger-abbey-sentences.txt started chapter 6.
+Thu Feb  1 14:01:27 2024 tests/pride-sentences.txt started chapter 6.
+Thu Feb  1 14:01:27 2024 tests/moby-dick-sentences.txt started chapter 6.
+Thu Feb  1 14:01:27 2024 tests/frankenstein-sentences.txt started chapter 6.
+Thu Feb  1 14:01:27 2024 tests/pride-sentences.txt started chapter 7.
+Thu Feb  1 14:01:27 2024 tests/northanger-abbey-sentences.txt started chapter 7.
+Thu Feb  1 14:01:27 2024 tests/moby-dick-sentences.txt started chapter 7.
+Thu Feb  1 14:01:27 2024 tests/frankenstein-sentences.txt started chapter 7.
+Thu Feb  1 14:01:28 2024 tests/northanger-abbey-sentences.txt started chapter 8.
+Thu Feb  1 14:01:28 2024 tests/pride-sentences.txt started chapter 8.
+Thu Feb  1 14:01:28 2024 tests/moby-dick-sentences.txt started chapter 8.
+Thu Feb  1 14:01:28 2024 tests/frankenstein-sentences.txt started chapter 8.
+Thu Feb  1 14:01:28 2024 tests/northanger-abbey-sentences.txt started chapter 9.
+Thu Feb  1 14:01:28 2024 tests/pride-sentences.txt started chapter 9.
+Thu Feb  1 14:01:28 2024 tests/moby-dick-sentences.txt started chapter 9.
+Thu Feb  1 14:01:28 2024 tests/frankenstein-sentences.txt started chapter 9.
+Thu Feb  1 14:01:29 2024 tests/northanger-abbey-sentences.txt started chapter 10.
+Thu Feb  1 14:01:29 2024 tests/frankenstein-sentences.txt started chapter 10.
+Thu Feb  1 14:01:29 2024 tests/pride-sentences.txt started chapter 10.
+Thu Feb  1 14:01:29 2024 tests/moby-dick-sentences.txt started chapter 10.
+Thu Feb  1 14:01:29 2024 tests/frankenstein-sentences.txt started chapter 11.
+Thu Feb  1 14:01:29 2024 tests/pride-sentences.txt started chapter 11.
+Thu Feb  1 14:01:29 2024 tests/moby-dick-sentences.txt started chapter 11.
+Thu Feb  1 14:01:29 2024 tests/northanger-abbey-sentences.txt started chapter 11.
+Thu Feb  1 14:01:30 2024 tests/frankenstein-sentences.txt started chapter 12.
+Thu Feb  1 14:01:30 2024 tests/pride-sentences.txt started chapter 12.
+Thu Feb  1 14:01:30 2024 tests/moby-dick-sentences.txt started chapter 12.
+Thu Feb  1 14:01:30 2024 tests/northanger-abbey-sentences.txt started chapter 12.
+Thu Feb  1 14:01:30 2024 tests/northanger-abbey-sentences.txt started chapter 13.
+Thu Feb  1 14:01:30 2024 tests/moby-dick-sentences.txt started chapter 13.
+Thu Feb  1 14:01:30 2024 tests/pride-sentences.txt started chapter 13.
+Thu Feb  1 14:01:30 2024 tests/frankenstein-sentences.txt started chapter 13.
+Thu Feb  1 14:01:30 2024 tests/frankenstein-sentences.txt started chapter 14.
+Thu Feb  1 14:01:30 2024 tests/moby-dick-sentences.txt started chapter 14.
+Thu Feb  1 14:01:30 2024 tests/pride-sentences.txt started chapter 14.
+Thu Feb  1 14:01:30 2024 tests/northanger-abbey-sentences.txt started chapter 14.
+Thu Feb  1 14:01:31 2024 tests/frankenstein-sentences.txt started chapter 15.
+Thu Feb  1 14:01:31 2024 tests/pride-sentences.txt started chapter 15.
+Thu Feb  1 14:01:31 2024 tests/moby-dick-sentences.txt started chapter 15.
+Thu Feb  1 14:01:31 2024 tests/northanger-abbey-sentences.txt started chapter 15.
+Thu Feb  1 14:01:31 2024 tests/frankenstein-sentences.txt started chapter 16.
+Thu Feb  1 14:01:31 2024 tests/pride-sentences.txt started chapter 16.
+Thu Feb  1 14:01:31 2024 tests/moby-dick-sentences.txt started chapter 16.
+Thu Feb  1 14:01:31 2024 tests/northanger-abbey-sentences.txt started chapter 16.
+Thu Feb  1 14:01:32 2024 tests/pride-sentences.txt started chapter 17.
+Thu Feb  1 14:01:32 2024 tests/northanger-abbey-sentences.txt started chapter 17.
+Thu Feb  1 14:01:32 2024 tests/frankenstein-sentences.txt started chapter 17.
+Thu Feb  1 14:01:32 2024 tests/moby-dick-sentences.txt started chapter 17.
+Thu Feb  1 14:01:33 2024 tests/frankenstein-sentences.txt started chapter 18.
+Thu Feb  1 14:01:33 2024 tests/northanger-abbey-sentences.txt started chapter 18.
+Thu Feb  1 14:01:33 2024 tests/pride-sentences.txt started chapter 18.
+Thu Feb  1 14:01:33 2024 tests/moby-dick-sentences.txt started chapter 18.
+Thu Feb  1 14:01:33 2024 tests/frankenstein-sentences.txt started chapter 19.
+Thu Feb  1 14:01:33 2024 tests/northanger-abbey-sentences.txt started chapter 19.
+Thu Feb  1 14:01:33 2024 tests/moby-dick-sentences.txt started chapter 19.
+Thu Feb  1 14:01:33 2024 tests/pride-sentences.txt started chapter 19.
+Thu Feb  1 14:01:34 2024 tests/pride-sentences.txt started chapter 20.
+Thu Feb  1 14:01:34 2024 tests/northanger-abbey-sentences.txt started chapter 20.
+Thu Feb  1 14:01:34 2024 tests/moby-dick-sentences.txt started chapter 20.
+Thu Feb  1 14:01:34 2024 tests/frankenstein-sentences.txt started chapter 20.
+Thu Feb  1 14:01:34 2024 tests/northanger-abbey-sentences.txt started chapter 21.
+Thu Feb  1 14:01:34 2024 tests/pride-sentences.txt started chapter 21.
+Thu Feb  1 14:01:34 2024 tests/moby-dick-sentences.txt started chapter 21.
+Thu Feb  1 14:01:34 2024 tests/frankenstein-sentences.txt started chapter 21.
+Thu Feb  1 14:01:35 2024 tests/northanger-abbey-sentences.txt started chapter 22.
+Thu Feb  1 14:01:35 2024 tests/pride-sentences.txt started chapter 22.
+Thu Feb  1 14:01:35 2024 tests/moby-dick-sentences.txt started chapter 22.
+Thu Feb  1 14:01:35 2024 tests/frankenstein-sentences.txt started chapter 22.
+Thu Feb  1 14:01:35 2024 tests/moby-dick-sentences.txt started chapter 23.
+Thu Feb  1 14:01:35 2024 tests/pride-sentences.txt started chapter 23.
+Thu Feb  1 14:01:35 2024 tests/northanger-abbey-sentences.txt started chapter 23.
+Thu Feb  1 14:01:35 2024 tests/frankenstein-sentences.txt started chapter 23.
+Thu Feb  1 14:01:36 2024 tests/northanger-abbey-sentences.txt started chapter 24.
+Thu Feb  1 14:01:36 2024 tests/pride-sentences.txt started chapter 24.
+Thu Feb  1 14:01:36 2024 tests/moby-dick-sentences.txt started chapter 24.
+Thu Feb  1 14:01:36 2024 tests/frankenstein-sentences.txt started chapter 24.
+Thu Feb  1 14:01:36 2024 tests/moby-dick-sentences.txt completed.
+Thu Feb  1 14:01:36 2024 tests/pride-sentences.txt completed.
+Thu Feb  1 14:01:36 2024 tests/northanger-abbey-sentences.txt completed.
+Thu Feb  1 14:01:37 2024 tests/frankenstein-sentences.txt completed.
+1 fashionable-looking,
+	1 words length 18
+2 cannibalistically
+3 circumnavigations
+4 disinterestedness
+5 gentleman-coachman
+6 half-apprehensions,
+7 misrepresentation
+8 pilgrim-worshipped
+9 self-collectedness
+10 uncomfortableness,
+	9 words length 17
+11 breakfast-parlour
+12 breakfast-parlour,
+13 death-forfeitures
+14 disproportionate
+15 half-extinguished
+16 impracticability.
+17 incomprehensible.
+18 incomprehensibly
+19 indiscriminately.
+20 indiscriminating
+21 inextinguishable
+22 perpendicularity
+23 self-condemnation
+24 self-satisfaction,
+25 succession-houses
+26 superciliousness
+27 superciliousness!
+28 superciliousness;
+29 susceptibilities,
+30 unseasonableness
+31 well-proportioned
+	21 words length 16
+32 accomplishments
+33 accomplishments,
+34 accomplishments,"
+35 accomplishments;
+36 acknowledgments.
+37 broad-shouldered
+38 cheerful-looking,
+39 classifications
+40 comfortableness
+41 congratulations
+42 conscientiously
+43 curricle-drivers
+44 death-harvesting
+45 disrespectfully
+46 dissatisfaction
+47 dissatisfaction,
+48 dressing-closets
+49 dressing-closets;
+50 Ehrenbreitstein,
+	19 words length 15

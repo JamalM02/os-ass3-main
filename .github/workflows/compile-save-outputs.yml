@@ -1,0 +1,77 @@
+name: Compile longestwords and save outputs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: longestwords build
+      run: make
+
+    - name: Archive longestwords
+      uses: actions/upload-artifact@v3
+      with:
+          name: longestwords
+          path: longestwords
+    - name: add test-script permissions
+      run: chmod 700 test-script
+    - name: add output directory
+      run: mkdir outputs
+      
+    - name: no length
+      run: ./longestwords tests/simple-tests  > outputs/no-length.txt
+
+    - name: no files
+      run: ./longestwords 10 > outputs/no-files.txt
+
+    - name: Simple test longest 5 words
+      run: ./longestwords 5 tests/simple-tests  > outputs/simple-5.txt
+
+    - name: Simple test longest 10 words
+      run: ./longestwords 10 tests/simple-tests  > outputs/simple-10.txt
+
+    - name: Simple test with second non-existent file longest 10 words
+      run: ./longestwords 10 tests/filenotexist tests/simple-tests > outputs/simple-10-fakefile.txt
+
+    - name: Simple test longest 15 words
+      run: ./longestwords 15 tests/simple-tests  > outputs/simple-15.txt
+
+    - name: Three short files longest 5 words
+      run: ./longestwords 5 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-5.txt
+
+    - name: Three short files longest 7 words
+      run: ./longestwords 7 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-7.txt
+
+    - name: Three short files longest 10 words
+      run: ./longestwords 10 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-10.txt
+
+    - name: Two long files longest 10 words
+      run: ./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-10.txt
+
+    - name: Two long files longest 50 words
+      run: ./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-50.txt
+
+    - name: Four long files longest 10 words
+      run: ./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-10.txt
+
+    - name: Four long files longest 50 words
+      run: ./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-50.txt
+
+    - name: Four/Five long files longest 100 words
+      run: ./longestwords 100 tests/moby-dick-sentences.txt tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby2-pride-northanger-frankenstein-100.txt
+
+    - name: Archive outputs
+      uses: actions/upload-artifact@v3
+      with:
+          name: all-outputs
+          path: outputs

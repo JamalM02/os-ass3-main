@@ -1,0 +1,26 @@
+Thu Feb  1 14:00:54 2024 tests/trivial2.txt started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/trivial3.txt started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/trivial1.txt started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/trivial3.txt started chapter 2.
+Thu Feb  1 14:00:54 2024 tests/trivial2.txt started chapter 2.
+Thu Feb  1 14:00:54 2024 tests/trivial1.txt started chapter 2.
+Thu Feb  1 14:00:54 2024 tests/trivial2.txt started chapter 3.
+Thu Feb  1 14:00:54 2024 tests/trivial3.txt started chapter 3.
+Thu Feb  1 14:00:54 2024 tests/trivial1.txt started chapter 3.
+Thu Feb  1 14:00:54 2024 tests/trivial3.txt completed.
+Thu Feb  1 14:00:54 2024 tests/trivial2.txt completed.
+Thu Feb  1 14:00:54 2024 tests/trivial1.txt completed.
+1 altruistic-like
+	1 words length 14
+2 consequently
+3 consequently;
+4 horsewatcher
+	3 words length 12
+5 altruistic
+6 arithmetic
+7 arithmetic,
+	3 words length 10
+8 Chapter
+9 Jumping
+10 jumping
+	3 words length 7

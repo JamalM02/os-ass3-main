@@ -1,0 +1,25 @@
+./longestwords tests/simple-tests  > outputs/no-length.txt
+./longestwords 10 > outputs/no-files.txt
+
+./longestwords 5 tests/simple-tests  > tests/simple-5.txt
+./longestwords 10 tests/simple-tests  > tests/simple-10.txt
+./longestwords 10 tests/filenotexist tests/simple-tests > outputs/simple-10-fakefile.txt
+./longestwords 15 tests/simple-tests  > outputs/simple-15.txt
+
+./longestwords 5 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-5.txt
+./longestwords 7 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-7.txt
+./longestwords 10 tests/trivial1.txt tests/trivial2.txt tests/trivial3.txt > outputs/trivial-123-10.txt
+
+./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-10.txt
+./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt  > outputs/moby-pride-50.txt
+
+./longestwords 10 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-10.txt
+./longestwords 50 tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby-pride-northanger-frankenstein-50.txt
+
+./longestwords 100 tests/moby-dick-sentences.txt tests/moby-dick-sentences.txt tests/pride-sentences.txt tests/northanger-abbey-sentences.txt tests/frankenstein-sentences.txt > outputs/moby2-pride-northanger-frankenstein-100.txt
+
+
+
+
+
+

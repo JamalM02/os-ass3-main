@@ -1,0 +1,62 @@
+Thu Feb  1 14:00:54 2024 tests/pride-sentences.txt started chapter 1.
+Thu Feb  1 14:00:54 2024 tests/moby-dick-sentences.txt started chapter 1.
+Thu Feb  1 14:00:55 2024 tests/pride-sentences.txt started chapter 2.
+Thu Feb  1 14:00:55 2024 tests/moby-dick-sentences.txt started chapter 2.
+Thu Feb  1 14:00:55 2024 tests/pride-sentences.txt started chapter 3.
+Thu Feb  1 14:00:55 2024 tests/moby-dick-sentences.txt started chapter 3.
+Thu Feb  1 14:00:56 2024 tests/pride-sentences.txt started chapter 4.
+Thu Feb  1 14:00:56 2024 tests/moby-dick-sentences.txt started chapter 4.
+Thu Feb  1 14:00:56 2024 tests/pride-sentences.txt started chapter 5.
+Thu Feb  1 14:00:56 2024 tests/moby-dick-sentences.txt started chapter 5.
+Thu Feb  1 14:00:56 2024 tests/moby-dick-sentences.txt started chapter 6.
+Thu Feb  1 14:00:56 2024 tests/pride-sentences.txt started chapter 6.
+Thu Feb  1 14:00:56 2024 tests/moby-dick-sentences.txt started chapter 7.
+Thu Feb  1 14:00:56 2024 tests/pride-sentences.txt started chapter 7.
+Thu Feb  1 14:00:57 2024 tests/moby-dick-sentences.txt started chapter 8.
+Thu Feb  1 14:00:57 2024 tests/pride-sentences.txt started chapter 8.
+Thu Feb  1 14:00:57 2024 tests/moby-dick-sentences.txt started chapter 9.
+Thu Feb  1 14:00:57 2024 tests/pride-sentences.txt started chapter 9.
+Thu Feb  1 14:00:58 2024 tests/pride-sentences.txt started chapter 10.
+Thu Feb  1 14:00:58 2024 tests/moby-dick-sentences.txt started chapter 10.
+Thu Feb  1 14:00:58 2024 tests/moby-dick-sentences.txt started chapter 11.
+Thu Feb  1 14:00:58 2024 tests/pride-sentences.txt started chapter 11.
+Thu Feb  1 14:00:58 2024 tests/moby-dick-sentences.txt started chapter 12.
+Thu Feb  1 14:00:58 2024 tests/pride-sentences.txt started chapter 12.
+Thu Feb  1 14:00:58 2024 tests/pride-sentences.txt started chapter 13.
+Thu Feb  1 14:00:58 2024 tests/moby-dick-sentences.txt started chapter 13.
+Thu Feb  1 14:00:59 2024 tests/pride-sentences.txt started chapter 14.
+Thu Feb  1 14:00:59 2024 tests/moby-dick-sentences.txt started chapter 14.
+Thu Feb  1 14:00:59 2024 tests/moby-dick-sentences.txt started chapter 15.
+Thu Feb  1 14:00:59 2024 tests/pride-sentences.txt started chapter 15.
+Thu Feb  1 14:00:59 2024 tests/moby-dick-sentences.txt started chapter 16.
+Thu Feb  1 14:00:59 2024 tests/pride-sentences.txt started chapter 16.
+Thu Feb  1 14:01:00 2024 tests/pride-sentences.txt started chapter 17.
+Thu Feb  1 14:01:00 2024 tests/moby-dick-sentences.txt started chapter 17.
+Thu Feb  1 14:01:01 2024 tests/pride-sentences.txt started chapter 18.
+Thu Feb  1 14:01:01 2024 tests/moby-dick-sentences.txt started chapter 18.
+Thu Feb  1 14:01:02 2024 tests/moby-dick-sentences.txt started chapter 19.
+Thu Feb  1 14:01:02 2024 tests/pride-sentences.txt started chapter 19.
+Thu Feb  1 14:01:02 2024 tests/moby-dick-sentences.txt started chapter 20.
+Thu Feb  1 14:01:02 2024 tests/pride-sentences.txt started chapter 20.
+Thu Feb  1 14:01:02 2024 tests/moby-dick-sentences.txt started chapter 21.
+Thu Feb  1 14:01:02 2024 tests/pride-sentences.txt started chapter 21.
+Thu Feb  1 14:01:03 2024 tests/moby-dick-sentences.txt started chapter 22.
+Thu Feb  1 14:01:03 2024 tests/pride-sentences.txt started chapter 22.
+Thu Feb  1 14:01:03 2024 tests/moby-dick-sentences.txt started chapter 23.
+Thu Feb  1 14:01:03 2024 tests/pride-sentences.txt started chapter 23.
+Thu Feb  1 14:01:03 2024 tests/moby-dick-sentences.txt started chapter 24.
+Thu Feb  1 14:01:03 2024 tests/pride-sentences.txt started chapter 24.
+Thu Feb  1 14:01:04 2024 tests/moby-dick-sentences.txt completed.
+Thu Feb  1 14:01:04 2024 tests/pride-sentences.txt completed.
+1 cannibalistically
+2 circumnavigations
+3 disinterestedness
+4 half-apprehensions,
+5 pilgrim-worshipped
+6 self-collectedness
+7 uncomfortableness,
+	7 words length 17
+8 breakfast-parlour,
+9 death-forfeitures
+10 superciliousness
+	3 words length 16
